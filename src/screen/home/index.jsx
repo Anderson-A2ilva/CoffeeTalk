@@ -6,7 +6,7 @@ export default function Home( { navigation }){
     return(
         <View style= {estilo.body}>
             <Image style={estilo.imagem} source={CoffeeShopLogo} />
-            <TouchableOpacity onPress={() => navigation.navigate('InicialTela')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Tab')}>
                 <Text style={estilo.botaotexto}>Entrar</Text>
             </TouchableOpacity>
         </View>
@@ -16,7 +16,8 @@ export default function Home( { navigation }){
 const estilo= StyleSheet.create({
     body: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#E5E5CB',
     },
     imagem:{
         width: 200,
@@ -27,12 +28,13 @@ const estilo= StyleSheet.create({
     botaotexto: {
         fontFamily: 'Poppins-Bold',
         padding: 10,
-        backgroundColor: '#ECE3CE',
+        backgroundColor: '#3C2A21',
         textAlign: 'center',
         marginBottom: 10,
         marginTop: 10,
         marginHorizontal: 16,
         borderRadius: 6,
         elevation: 2,
+        color: '#F5F5F5'
     }
 })

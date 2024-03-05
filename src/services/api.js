@@ -1,8 +1,10 @@
 import axios from "axios";
 
-const api = axios.create({
+const hotCoffeeApi = axios.create({
     baseURL: "https://api.sampleapis.com/coffee/hot",
+});
+const icedCoffeeApi = axios.create({
     baseURL: "https://api.sampleapis.com/coffee/iced"
 });
 
-export default api;
+export { hotCoffeeApi, icedCoffeeApi };

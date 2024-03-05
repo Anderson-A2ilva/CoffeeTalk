@@ -7,11 +7,11 @@ import {
     StyleSheet,
     TouchableOpacity
 } from "react-native";
-import { listHotCoffe } from "../../services/requisicoes/hotCaffee";
+import { listIcedCoffe } from "../../services/requisicoes/iced";
 import TopoCafe from "../../components/topoCaffee/index"
 import Separador from "../../components/separador/index"
 
-export default function HotCoffee() {
+export default function IcedCoffee() {
     const [data, setData] = useState([]);
     const [expandidoItem, setExpandidoItem] = useState(null);
 
@@ -22,7 +22,7 @@ export default function HotCoffee() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const resultado = await listHotCoffe();
+                const resultado = await listIcedCoffe();
                 setData(resultado);
             } catch (error) {
                 console.log("Erro ao buscar dados:", error);

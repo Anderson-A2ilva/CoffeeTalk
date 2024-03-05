@@ -1,8 +1,8 @@
-import api from "../api";
+import {hotCoffeeApi} from "../api";
 
 export async function listHotCoffe() {
     try {
-        const resultado  = await api.get('https://api.sampleapis.com/coffee/hot');
+        const resultado  = await hotCoffeeApi.get('https://api.sampleapis.com/coffee/hot');
         return resultado.data;
         }
         catch (error){
